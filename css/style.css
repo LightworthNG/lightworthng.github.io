@@ -41,6 +41,7 @@ section[id]{
   text-align: center;
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
+  color: #555555;
   margin-bottom: 18px;
 
 }
@@ -58,6 +59,7 @@ a[href*='#'], a{
 }
 
 /* Banner */
+
 .banner-wrapper{
   width: 90%;
   margin: auto;
@@ -66,18 +68,22 @@ a[href*='#'], a{
   width: 100%;
   background-size: cover;
   background-image: url(../img/lightworth-banner.jpg);
-  height: 80vmin;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: auto;
   /* padding: 20px 0px; */
   position: relative;
   filter: grayscale(60%);
 }
 .banner-top-image{
-  background-image: url(../img/smile-woman-banner.jpg);
+  background-image: url(../img/smile-woman-banner.png);
   height: 75vmin;
   background-repeat: no-repeat;
   background-size: cover;
-  float: right;
   background-position-x: center;
+  float: right;
+  
   filter: brightness(30%);
 }
 
@@ -91,8 +97,8 @@ border-radius: 10px 0px 0px 10px;
  padding: 20px 15px;
  opacity: .7;
  z-index: 99;
- position: absolute; top: 10%; left: 0px; right: 0px;
- /* bottom: 10%; */
+ position: absolute;   left: 0px; right: 0px;
+ /* bottom: 10px; */
 }
 .banner-text h1{
   margin: 0px;
@@ -101,7 +107,7 @@ border-radius: 10px 0px 0px 10px;
 }
 .banner-text p{
   font-size: 1.1em;
-  font-weight: bold;
+  font-weight: 300;
   line-height: 1.5;
 }
 .banner-btn{
@@ -276,6 +282,7 @@ section#trust{
 }
 /* end our-solution */
 /* start contact */
+
 #contact input, #contact select{
   width: 100%;
   margin-bottom: 15px;
@@ -283,6 +290,14 @@ section#trust{
   font-size: 1.1em;
   line-height: 1.5;
   font-weight: normal;
+
+  background: #444;
+  color: #eee;
+}
+
+#contact select optgroup option:nth-last-of-type(odd){
+  background: #4CAF50;
+  color: #444;
 }
 #contact textarea{
   resize: none;
@@ -291,6 +306,9 @@ section#trust{
   display: block;
   margin: auto;
   padding: 5px 12px;
+
+  background: #444;
+  color: #ffe;
 }
 .contact-btn{
   display: block;
@@ -308,7 +326,7 @@ section#trust{
   text-align: center;
   margin: 10px 20px;
   font-size: 1.4em;
-  background: var(--ok-color, #4CAF50);
+  background: var(--ok-color, #444);
   color: var(--light-color, #f9f9f9);
   padding: 12px;
 }
@@ -333,7 +351,8 @@ section#trust{
   padding: 4px 20px; 
 }
 .office-hours tr:nth-of-type(odd){
-  background: pink; 
+  background: #444; 
+  color: #eee;
 }
 /* end contact */
 /* start footer */
@@ -376,7 +395,32 @@ section#trust{
   z-index: 999;
 }
 /* end footer */
-
+@media screen and (max-width: 400px){
+  .container{
+    width: 98%;
+    padding: 15px 0px;
+  }
+  #logo{
+    display: block;
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+  .navlink{
+    padding: 8px 20px;
+  }
+  #menu{
+    padding: 0;
+  }
+  .banner{
+    overflow: auto;
+  }
+  .banner-text{
+    width: 100%;
+    /* margin-left: 20px; */
+    /* height: 80vmin; */
+  }
+}
 /* For Tablets */
 @media screen and (min-width: 560px){
   /* start Project styles */

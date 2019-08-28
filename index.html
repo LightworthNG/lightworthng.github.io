@@ -53,9 +53,8 @@
       <div class="banner-wrapper">
         <div class="grid-6 grid-md-8 banner-text">
           <h1> We Love Smiles</h1>
-          <p>We love to see the smile of success - everyday.
-            So we create technology solutions to help
-            businesses grow & scale sustainably.
+          <p>
+
             As a web apps & software development centre, our
             products & services are designed to help businesses
             and corporations to stay ahead, become more
@@ -64,17 +63,17 @@
           <a href="#features" class="btn banner-btn">Discover How</a>
         </div>
         <div class="grid-6 grid-md-4 banner-top-image">
-          <!-- <div class=""></div> -->
+
         </div>
 
       </div>
-      <!-- <img class="hero-image" src="./img/teamwork.jpg" /> -->
+
     </div>
 
   </header>
   <main>
     <section id="features" class="row">
-      <h2 class="section-heading">What you'll always get...</h2>
+      <h2 class="section-heading">Experience...</h2>
       <div class="container">
         <div class="grid-3 grid-md-6 ft-item">
           <i class="fa fa-lightbulb"></i>
@@ -125,7 +124,7 @@
         <div class="grid-5 grid-md-6">
           <figure>
             <img src="./img/customer-relations.jpg" alt="about lightworth computing" />
-            <figcaption>Enough smiles for everyone</figcaption>
+            <figcaption>Never miss a single step</figcaption>
           </figure>
         </div>
       </div>
@@ -303,18 +302,20 @@
         <!-- <div class="grid-1 grid-md-1"></div> -->
         <div class="grid-6 grid-md-6">
           <form name="lightworth-contact" method="POST" action="https://formspree.io/lightworthng@gmail.com">
-            <input type="text" name="name" placeholder="Firstname Lastname" />
-            <input type="email" name="email" placeholder="your-email@domain.com" />
+            <input type="text" required name="name" placeholder="Firstname Lastname" />
+            <input type="email" required name="email" placeholder="your-email@domain.com" />
             <select name="service">
-              <option selected> Select Purpose </option>
-              <option> Web Design & Apps </option>
-              <option> Programming & Software Development </option>
-              <option> Ecommerce </option>
-              <option> Digital Marketing </option>
-              <option> Training & Consultancy </option>
-              <option> Corporate Logo Design </option>
+              <option selected> Please Select Purpose </option>
+              <optgroup label="purpose">
+                <option value="Web Design & Apps">Web Design & Apps</option>
+                <option value="Programming & Software Development"> Programming & Software Development </option>
+                <option value="Ecommerce"> Ecommerce </option>
+                <option value="Digital Marketing"> Digital Marketing </option>
+                <option value="Training & Consultancy"> Training & Consultancy </option>
+                <option value="Corporate Logo Design"> Corporate Logo Design </option>
+              </optgroup>
             </select>
-            <textarea name="message" rows="10" cols="15" placeholder="Enter your Message..."></textarea>
+            <textarea required name="message" rows="10" cols="15" placeholder="Enter your Message..."></textarea>
             <button type="submit" class="btn contact-btn">Send</button>
           </form>
         </div>
