@@ -1,0 +1,490 @@
+@import 'config';
+
+
+
+/********************** Navigation Bar *************************/
+.fixed{
+  position: fixed;
+  top: 0;
+  background-color: $light-color;
+  z-index: 99999;
+}
+.navbar{
+  background-color: $light-color;
+  line-height: 4.0;
+  display: block;
+  width: 100%;
+  line-height: 4.0;
+  border-bottom: 1px solid #F1F1F1;
+
+}
+.navbar-container{
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+#toggle-nav-menu{
+  display: none;
+  user-select: none;
+  // show navlinks when mnenu icon is clicked
+  &:checked ~ .navbar-container .navlinks{
+    display: block;
+  }
+}
+
+// Hamburger menu icon
+// At setup, hide menu icon
+.menu-icon{
+  display: none;
+  svg{
+    vertical-align: middle;
+    fill: $primary-color;
+    font-weight: bolder;
+
+  }
+  // Show menu icon on small screen and hide navlinks
+  @media screen and (max-width: $tablet-size) {
+    line-height: 5.0;
+    display: block;
+    float: right;
+  }
+}
+
+.logo{
+  display: inline;
+  padding-right: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+  &-icon{
+    position: relative;
+    bottom: -11px;
+    width: 48px;
+    max-height: 48px;
+    
+  }
+  &-name{
+    color: $primary-color;
+    font-weight: bolder;
+    font-size: 1.3rem;
+   
+  }
+}
+
+.navlinks{
+  display: inline;
+  transition: all .5s;
+  .nav-item{
+    padding: .3rem .5rem;
+    font-weight: 400;
+    color: $primary-color;
+    transition: border .1s;
+
+    &:hover{
+      border-bottom: 4px solid $primary-color;
+      background-color: $light-color;
+      opacity: .5;
+    }
+  }
+
+  .navbar-cta{
+    background-color: $primary-color;
+    color: $light-color;
+    border-radius: 1rem;
+    padding: .8rem 1.9rem;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    right: 3rem;
+    line-height: 0.5;
+    transition: background-color 0.5s;
+    &:hover{
+        color: $primary-color;
+        background-color: $light-color;
+        border: 2px solid $primary-color;
+      }
+  }
+  // Hide navlinks on small screens
+  @media screen and (max-width: $tablet-size) {
+    display: none;
+
+    & .nav-item, & .navbar-cta {
+      display: block;
+      line-height: 2.3;
+      text-align: left;
+      padding: .2rem 1.2rem;
+      position: inherit;
+      &:hover{
+        border: none;
+      }
+    }
+  }
+}
+
+/************ Page Header and Banner *********************/
+.page-header{
+  background-color: $primary-color;
+  padding: 3rem 0rem;
+  width: 100%;
+  display: block;
+
+}
+.banner{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  column-gap: .8rem;
+  @media screen and (max-width: $mobile-size){
+    &{
+      display: block;
+    }
+  }
+}
+.banner-caption{
+  width: 50%;
+  color: #FFF;
+  p{
+    font-size: .8rem;
+    color: $light-color;
+  }
+  @media screen and (max-width: $mobile-size){
+    &{
+      display: block;
+      width: 100%;
+    }
+  }
+}
+.banner-hero{
+  
+  color: $light-color;
+  background-color: $primary-color;
+  opacity: .4;
+  background-image: url(../img/fix-website.jpeg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: border-box;
+  h1{
+    z-index: 10;
+    font-size: 3rem;
+    color: #673ab7;
+    text-align: center;
+
+    border: 5px solid #673ab7;
+  }
+  @media screen and (max-width: $mobile-size){
+    &{
+      background-size: cover;
+      height: 16rem;
+    }
+  }
+}
+.banner-cta{
+  margin-top: 2rem;
+  line-height: 2.5;
+  display: block;
+  width: 100%;
+
+  a{
+    &:first-of-type{
+      border: 1px solid $light-color;
+      margin-right: 1.5rem;
+    }
+    @media screen and (max-width: $tablet-size){
+      &{
+        display: block;
+        width: 100%;
+        padding: .5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  
+}
+
+/*****************ABOUT US ************************/
+.wrapper{
+  width: 100%;
+  display: block;
+}
+
+.about-caption{
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  background-color: #eee;
+  border-radius: 1rem;
+  padding: 2rem;
+  padding-right: 11rem;
+  h2{
+    margin-bottom: 1.4rem;
+  }
+  article{
+    margin-bottom: 1.2rem;
+  }
+  @media screen and (max-width: $mobile-size){
+    padding-right: 0;
+    padding: 2rem;
+    width: 100%;
+  }
+}
+
+.about-image{
+  position: absolute;
+  top: 16%;
+  right: -8rem;
+  border-radius: 50%;
+  border: 10px groove $primary-color;
+  height: 60%;
+  @media screen and (max-width: $mobile-size){
+    top: -5%;
+    right: -2rem;
+    height: 37%;
+    opacity: .2;
+  }
+}
+
+/*********************FEATURE CARD*********************/
+#features{
+  @media screen and (max-width: $mobile-size){
+    &{
+      // background-image: url(../img/2.png);
+      background-image: url(../img/images.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    
+    }
+ }
+   
+}
+.feature-wrapper{
+  display: flex;
+  @media screen and (max-width: $mobile-size){
+    &{
+      display: block;
+      color: $light-color;
+      background-color: $primary-color;
+      opacity: .7;
+      padding: 1.5rem;
+    }
+  }
+  
+}
+.feature-items{
+  width: 55%;
+  @media screen and (max-width: $mobile-size){
+    &{
+      width: 100%;
+    }
+  }
+
+}
+
+.feature-product-image{
+  width: 45%;
+  background-color: #a4dcc3;
+  background-image: url(../img/images.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  opacity: .7;
+  @media screen and (max-width: $mobile-size){
+    &{
+      display: none;
+    }
+  }
+}
+
+.feature-card{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 1rem 0;
+
+}
+.feature-caption{
+  padding-left: 2rem;
+  h3{
+    color: $primary-color;
+  }
+}
+.feature-icon{
+  color: $primary-color;
+}
+
+/*********************OUR SERVEICES**************************/
+#services{
+  background-color: $light-color;
+  .btn{
+    background-color: #ddd;
+  }
+}
+/*********************OUR WORK**************************/
+.card{
+  flex-basis: 33%;
+}
+/*********************TEAMS**************************/
+.team-wrapper{
+  display: flex;
+  columns: .9rem;
+  @media screen and (max-width: $tablet-size) {
+    overflow-x: scroll;
+  }
+}
+.member{
+  position: relative;
+  padding: .4rem;
+  border-radius: .4rem;
+  box-shadow: 1px 1px 1px #ccc;
+  
+
+  &:hover .member-info{
+    display: block;
+  }
+}
+.member-info{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  margin: auto;
+  text-align: center;
+  background-color: $primary-color;
+  color: $light-color;
+  transition: all .5s;
+}
+
+/**************** TESTIMONIAL ***************/
+#testimonial{
+  background-color: #555;
+  color: $light-color;
+}
+.testimony{
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.message{
+  &::after, &::before{
+    content: "\"";
+    font-weight: bolder;
+    // font-size: 2.4rem;
+    display: inline-block;
+  }
+}
+.person{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: .8rem;
+  img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+  ul{
+    padding-left: 1.5rem;
+    li{
+      &:first-of-type{
+        font-weight: bolder;
+      }
+      &:last-of-type{
+        font-size: .8rem;
+        font-style: italic;
+      }
+    }
+  }
+    
+}
+// Contact
+
+.contact{
+  &-form, &-data{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  
+  &-data{
+    width: 39%;
+    li{
+      line-height: 2.3;
+    }
+    li:first-of-type{
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid $light-color;
+    }
+  }
+  &-form{
+    width: 60%;
+  }
+
+  @media screen and (max-width: $tablet-size){
+    &-form, &-data{
+      display: block;
+      width: 100%;
+      margin: auto;
+      li, li:first-of-type{
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        padding-bottom: 0rem;
+        border-bottom: none
+      }
+      li:last-of-type{
+        padding-bottom: 1.5rem;
+        border-bottom: 1px$light-color solid;
+      }
+    }
+  }
+}
+
+.contact-icon{
+  position: relative;
+  bottom: -8px;
+  color: $primary-color;
+  margin-right: 1rem;
+}
+.contact-info{
+  display: inline;
+}
+
+// Our Works
+.card{
+  &-title, &-icon{
+    color: $primary-color;
+    fill: $primary-color;
+  }
+  &-cta a{
+    font-weight: bolder;
+    color: $primary-color;
+  }
+}
+#footer{
+  padding: 1.5rem 1rem;
+  background-color: #333;
+  color: #ddd;
+  
+}
+
+#scroll-top{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  font-size: 1.6em;
+  background: $light-color;
+  color: $primary-color;
+  padding: 10px;
+  z-index: 999;
+}
