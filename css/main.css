@@ -44,6 +44,7 @@ a {
   margin: 1.8rem auto;
   font-size: 1.8rem;
   position: relative;
+  color: #011b33;
 }
 
 .point {
@@ -310,6 +311,16 @@ label {
   font-weight: bolder;
   font-size: 1.3rem;
 }
+@media screen and (max-width: 390px) {
+  .logo-name {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .logo-name {
+    font-size: 0.7rem;
+  }
+}
 
 .navlinks {
   display: inline;
@@ -550,6 +561,17 @@ label {
 
 .feature-icon {
   color: #5678ee;
+}
+@media screen and (max-width: 680px) {
+  .feature-icon {
+    color: #f9f9f9;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #features .section-title {
+    color: #f9f9f9;
+  }
 }
 
 /*********************OUR SERVEICES**************************/
